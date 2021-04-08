@@ -1,0 +1,28 @@
+__winc_id__ = 'ae539110d03e49ea8738fd413ac44ba8'
+__human_name__ = 'files'
+
+#part1
+import os
+os.chdir('c:\\')
+
+os.system('mkdir CACHE')
+
+#part2
+from zipfile import ZipFile
+
+with ZipFile('data.zip', 'r') as zipObj:
+      zipObj.extractall()
+     
+# Ik zit al uren vast op part 3/4, om verder te kunnen met de training lever ik de opdracht zo in. Ik krijg later uitleg van een vriend van mij. Wellicht kunnen julli mij ook op weg helpen
+#part3
+def cached_files():
+
+
+
+#path nagaan
+abs_pathname = os.path.abspath("sample1.xls")
+
+
+
+
+print(abs_pathname)
