@@ -1,0 +1,21 @@
+import os
+#part1
+def clean_cache():
+    os.system("rm -rf CACHE")
+    os.system('mkdir CACHE')
+    
+#part2
+def cache_zip(zip_path, cache_path):
+    import zipfile as z
+    root = z.ZipFile(zip_path)
+    root.extractall(cache_path)
+    root.close()
+    
+#part3
+def cached_files():
+    result = []
+    for filename in os.listdir("CACHE"):
+        relative_path = os.path.join("CACHE", filename)
+        abs_pathname = os.path.abspath(relative_path)
+        result.append(abs_pathname)
+    return result
